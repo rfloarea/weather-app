@@ -1,15 +1,31 @@
 // GOAL: take any location (input) and return weather data for that location (output)
 
 // Step One: Get user input (location)
-const address = () => {
-    return prompt('Address', 'example: 350 5th Ave New York City, NY')
-};
-address();
+const address = prompt('Enter an address', '350 5th Ave New York City NY');
 
+// Step Two: build a new URL with our address to hit the geocoding API
+async function buildURL() {
+    try {
+        const url = new URL(`https://geocoding.geo.census.gov`);
+        url.pathname = `/geocoder/locations/onelineaddress?address=${address}&benchmark=2020&format=json`
+        console.log(url.pathname);
+        console.log(url.href);
+    } catch (error) {
+        return error;
+    }
+}
+// GOAL - https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=350%205th%20Ave%20New%20York%20City%20NY&benchmark=2020&format=json
+// ACTUAL - https://geocoding.geo.census.gov/geocoder/locations/onelineaddress%3Faddress=350%205th%20Ave%20New%20York%20City%20NY&benchmark=2020&format=json
+// That dam '?'   
+
+buildURL();
 // Step Two: Get coordinates of that address
-// async function getCoordinates() {
+// async function getCoordinates(address) {
+
+//     const encodeAddress
+    
 //     try {
-//         const response = await fetch( /* API URL */, {mode: 'cors'});
+//         const response = await fetch(`${url}`, {mode: 'cors'});
 //         const rawCoordinates = await response.json();
 //     } catch (error) {
 //         return error;
