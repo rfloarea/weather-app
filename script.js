@@ -9,8 +9,8 @@ function getCoordinatesWithAddress() {
 function getCoordinatesWithDeviceLocation() {
   
     function success(position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
+      const latitude = position.coords.latitude.toFixed(4);
+      const longitude = position.coords.longitude.toFixed(4);
       console.log('lat: ', latitude);
       console.log('long: ', longitude);
     }
@@ -28,6 +28,23 @@ function getCoordinatesWithDeviceLocation() {
 }
 
 getCoordinatesWithDeviceLocation();
+
+// Use these coordinates for our first weather API call: `https://api.weather.gov/points/{lat},{lon}`
+
+// Step Five: Make our first weather API call using the above URL
+
+// Step Six: Use this second URL to make our final API call
+async function getTonightsForecast() {
+    try {
+        const response = await fetch('https://api.weather.gov/gridpoints/OKX/34,37/forecast', {mode: 'cors'});
+        const weatherData = await response.json();
+        const tonightsForecast = await weatherData.properties.periods[0].detailedForecast
+        // console.log(tonightsForecast) // logs the value data
+        return tonightsForecast; // returns a promise
+    } catch (error){
+        return error;
+    }   
+}
 
 // async function buildURL() {
 //     try {
@@ -52,20 +69,3 @@ getCoordinatesWithDeviceLocation();
 //         return error;
 //     }
 // };
-
-// Step Four: Inject our cookedCoordinates into our first weather API URL: `https://api.weather.gov/points/{lat},{lon}`
-
-// Step Five: Make our first weather API call using the above URL
-
-// Step Six: Use this second URL to make our final API call
-async function getTonightsForecast() {
-    try {
-        const response = await fetch('https://api.weather.gov/gridpoints/OKX/34,37/forecast', {mode: 'cors'});
-        const weatherData = await response.json();
-        const tonightsForecast = await weatherData.properties.periods[0].detailedForecast
-        // console.log(tonightsForecast) // logs the value data
-        return tonightsForecast; // returns a promise
-    } catch (error){
-        return error;
-    }   
-}
