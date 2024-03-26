@@ -22,7 +22,7 @@ function searchWeather() {
         .catch(error => {
             console.log('Error fetching weather data: ', error);
             const weatherInfo = document.getElementById('weather-info');
-            weatherInfo.innerHTML = '<p>City note found</p>';
+            weatherInfo.innerHTML = '<p>Whoops! Location not found.</p>';
         })
 }
 
