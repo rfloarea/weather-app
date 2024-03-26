@@ -26,4 +26,11 @@ function searchWeather() {
         })
 }
 
+// add event listener for "enter" keydown event in the search field
+document.getElementById('location-input').addEventListener('keydown', function(event) {
+    if (event.key == 'Enter') {
+        searchWeather();
+    }
+})
+
 searchWeather();
