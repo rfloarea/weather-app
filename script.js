@@ -1,6 +1,6 @@
 // use openweather for weather data
 async function getWeather(city, apiKey) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -17,7 +17,7 @@ async function main() {
     const weatherData = await getWeather(city, apiKey);
     if (weatherData && weatherData.cod === 200) {
         console.log(`Weather in ${city}:`);
-        console.log(`Temperature: ${weatherData.main.temp}°C`);
+        console.log(`Temperature: ${weatherData.main.temp}°F`);
         console.log(`Description: ${weatherData.weather[0].description}`);
     } else {
         console.log("City not found!");
