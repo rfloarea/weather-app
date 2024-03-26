@@ -20,13 +20,14 @@ function searchWeather() {
             console.log(`Description: ${data.weather[0].description}`);
         })
         .catch(error => {
+            // handle errors
             console.log('Error fetching weather data: ', error);
             const weatherInfo = document.getElementById('weather-info');
             weatherInfo.innerHTML = '<p>Whoops! Location not found.</p>';
         })
 }
 
-// add event listener for "enter" keydown event in the search field
+// add event listener for "enter" keydown event in the input field
 document.getElementById('location-input').addEventListener('keydown', function(event) {
     if (event.key == 'Enter') {
         searchWeather();

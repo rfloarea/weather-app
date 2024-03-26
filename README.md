@@ -21,3 +21,7 @@ Tuesday, March 26th 2024 @12:46pm
 Got a very simple GUI up and running. Getting more and more comfortable with connecting interfaces with logic feel good.
 
 I'm intentionally not using React for this because I really want to feel wat it's like to write this stuff from scratch. We'll get there soon. But not yet.
+
+@1:49pm
+
+I think I'm going to leave it there for now. It does what I want it to do. I'll create something more involved using React. This was a good practice round :P
