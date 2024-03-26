@@ -33,5 +33,3 @@ document.getElementById('location-input').addEventListener('keydown', function(e
         searchWeather();
     }
 })
-
-searchWeather();
