@@ -1,7 +1,9 @@
 # Weather App
-A very simple weather app for, ya know, checking the weather.
+
+A very simple weather app for checking the weather.
 
 ## Tools and Tech
+
 - HTML, CSS, JavaScript
 - JavaScript promises
 - Openweather API
@@ -25,3 +27,11 @@ I'm intentionally not using React for this because I really want to feel wat it'
 @1:49pm
 
 I think I'm going to leave it there for now. It does what I want it to do. I'll create something more involved using React. This was a good practice round :P
+
+---
+
+Wednesday, July 3rd 2024 @6:46pm
+
+Coming back to this project is a trip. I like having it under my belt. It's a good feeling to having something you've done to look back on and re-learn from.
+
+I did some minor updates to the text. I would like to build the UI out a bit at some point. But keep everything vanilla.
