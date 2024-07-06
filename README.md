@@ -35,3 +35,23 @@ Wednesday, July 3rd 2024 @6:46pm
 Coming back to this project is a trip. I like having it under my belt. It's a good feeling to having something you've done to look back on and re-learn from.
 
 I did some minor updates to the text. I would like to build the UI out a bit at some point. But keep everything vanilla.
+
+---
+
+Saturday, July 6th 2024 @7:16am
+
+I have some features to add. And by "features" I just mean, "I want to show more weather information than just the temp and short description.
+
+Things to include are:
+
+- air quality
+- air pressure
+- 3 day forecast
+- humidity
+- percent chance of precipitation
+- UV index
+- longer weather description
+
+Yeah, that seems a bit more useful.
+
+But more importantly, how is supposed to be actually useful if I can't know which city I'm actually searching? As it is, I can search "Springfield", and I get one result. But there are dozens of Springfields! I'm going to need to improve the search function a lot more, to make this more than a cute toy.
